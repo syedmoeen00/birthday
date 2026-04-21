@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Intro loader -->
+    <div id="intro-loader" class="loader-screen">
+      <div class="loader-content">
+        <p class="loader-text">A special surprise is loading...</p>
+        <div class="loader-bar">
+          <span class="loader-progress"></span>
+        </div>
+      </div>
+      <div class="floating-hearts" aria-hidden="true"></div>
+    </div>
+
+    <!-- Floating decorative hearts -->
+    <div class="global-particles" aria-hidden="true"></div>
+
+    <main id="main-content" class="hidden">
+      <div class="slider-shell">
+        <!-- Slide 1: Hero -->
+        <section class="slide is-active" data-slide="0">
+          <div class="hero-card card-entrance">
+            <h1>Happy Birthday <span class="name-accent">Parishay</span> 💖</h1>
+            <p>
+              In case no one told you this, your smile turns ordinary moments
+              into golden memories and today is all about celebrating your
+              light.
+            </p>
+          </div>
+        </section>
+
+        <!-- Slide 2: Memory Gallery -->
+        <section class="slide" data-slide="1">
+          <div class="section-heading card-entrance">
+            <h2>Your Gallery</h2>
+            <p>Little frames of love and beauty.</p>
+          </div>
+          <div class="memory-grid card-entrance">
+            <article class="memory-card">
+              <img src="images/photo4.jpeg" alt="" />
+            </article>
+            <article class="memory-card">
+              <img src="images/photo1.jpeg" alt="" />
+            </article>
+            <article class="memory-card">
+              <img src="images/photo2.jpeg" alt="" />
+            </article>
+            <article class="memory-card">
+              <img src="images/photo3.jpeg" alt="" />
+            </article>
+          </div>
+        </section>
+
+        <!-- Slide 3: Interactive Gift -->
+        <section class="slide" data-slide="2">
+          <div class="gift-card card-entrance">
+            <h2>A tiny surprise for you</h2>
+            <p>Click the gift box and make a wish.</p>
+            <button id="gift-btn" class="gift-btn" type="button">
+              Click to open your gift 🎁
+            </button>
+            <p id="gift-message" class="gift-message hidden">
+              You are my favorite...Thank you for existing and making
+              life feel like poetry. ✨
+            </p>
+          </div>
+        </section>
+
+        <!-- Slide 4: Quiz Game -->
+        <section class="slide" data-slide="3">
+          <div class="quiz-card card-entrance">
+            <h2>How Well Do You Know Me? 😼</h2>
+            <p class="quiz-subtitle">
+              A playful birthday quiz, made with love.
+            </p>
+            <div id="quiz-container"></div>
+            <button id="quiz-next" class="quiz-next" type="button">
+              Next Question
+            </button>
+            <p id="quiz-feedback" class="quiz-feedback"></p>
+          </div>
+        </section>
+
+        <!-- Slide 5: Typing Message -->
+        <section class="slide" data-slide="4">
+          <div class="typing-card card-entrance">
+            <h2>A Letter From My Heart</h2>
+            <p id="typed-message" class="typed-message" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <!-- Slide 6: Final -->
+        <section class="slide final" data-slide="5">
+          <div class="final-card card-entrance">
+            <h2>Happy Birthday once again PARATHAAA 🌚</h2>
+            <p>
+              May this year hold gentle joy, brave dreams, and endless love.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Slide controls -->
+    <div class="slide-controls">
+      <button id="prev-slide" class="nav-btn" type="button">← Previous</button>
+      <span id="slide-indicator" class="slide-indicator">1 / 6</span>
+      <button id="next-slide" class="nav-btn" type="button">Next →</button>
+    </div>
+
+    <!-- Music controls -->
+    <button
+      id="music-toggle"
+      class="music-toggle"
+      type="button"
+      aria-pressed="false"
+    >
+      🔇 Music Off
+    </button>
+    <audio
+      id="bg-music"
+      src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2c94681adf.mp3?filename=romantic-background-112623.mp3"
+      preload="auto"
+      loop
+      autoplay
+    ></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
